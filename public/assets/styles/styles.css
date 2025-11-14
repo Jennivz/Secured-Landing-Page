@@ -1,0 +1,336 @@
+body {
+  margin: 0;
+  font-family: "Arimo", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+/* ================= HEADER ================= */
+
+.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #ffffff;
+  box-shadow: 0 1px 0 rgba(15, 23, 42, 0.08);
+}
+
+/* Aquí defines qué tan alto quieres el header */
+.main-header .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 90px;              /* ⇐ cambia este valor si lo quieres más alto/bajo */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 0 32px;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo img {
+  height: 44px;              /* tamaño del logo */
+  width: auto;
+  display: block;
+}
+
+/* Menú centrado */
+.main-nav {
+  flex: 1;
+}
+
+.main-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  color: #1d2a3b;
+  font-weight: 500;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.main-nav a:hover {
+  color: #1662ff;
+  border-bottom-color: #1662ff;
+}
+
+
+/* Logo */
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* Aquí controlamos el tamaño del PNG */
+.logo img {
+  height: 40px;      /* tamaño visible del logo */
+  width: auto;       /* mantiene la proporción original */
+  display: block;
+}
+
+
+.logo span {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f1f3a;
+}
+
+/* Menú */
+
+.main-nav {
+  flex: 1;
+}
+
+.main-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center; /* menú centrado */
+  gap: 32px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  color: var(--text-color);
+  font-weight: 500;
+  padding-bottom: 4px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.main-nav a:hover {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+}
+
+/* Botón CTA */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 1.6rem;
+  background-color: #1662ff !important;  /* azul sólido */
+  color: #ffffff !important;             /* texto blanco */
+  text-decoration: none;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  box-shadow: 0 8px 18px rgba(22, 98, 255, 0.35);
+  transition: transform 0.15s ease, box-shadow 0.15s ease,
+              background-color 0.15s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0f54dd !important;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(22, 98, 255, 0.4);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 5px 14px rgba(22, 98, 255, 0.3);
+}
+
+/* Versión simple en pantallas pequeñas (por ahora solo reduce tamaño) */
+@media (max-width: 768px) {
+  .main-header .container {
+    gap: 16px;
+    padding: 0 16px;
+  }
+
+  .main-nav ul {
+    gap: 16px;
+    font-size: 0.85rem;
+  }
+
+  .logo span {
+    font-size: 1.25rem;
+  }
+
+  .btn-primary {
+    padding: 0.45rem 1.2rem;
+    font-size: 0.85rem;
+  }
+}
+/* ============ HERO / INICIO ============ */
+
+.hero {
+  background-color: #07172b;      /* fondo azul oscuro */
+  color: #f9fafb;
+}
+
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 32px 96px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 64px;
+}
+
+/* Columna izquierda */
+
+.hero-content {
+  flex: 1 1 55%;
+}
+
+.hero-title {
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin: 0 0 16px;
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  margin: 0 0 32px;
+  font-size: 1rem;
+  color: #d1d5db;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+/* Reusamos .btn-primary que ya tienes, solo ajustamos pequeñas cosas opcionales */
+.hero-btn-primary {
+  padding-inline: 1.8rem;
+}
+
+.hero-arrow {
+  margin-left: 8px;
+}
+
+/* Botón secundario */
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 1.6rem;
+  background-color: transparent;
+  color: #e5e7eb;
+  border-radius: 999px;
+  border: 1px solid #9ca3af;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease,
+              border-color 0.15s ease, transform 0.15s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #111827;
+  border-color: #e5e7eb;
+  transform: translateY(-1px);
+}
+
+.hero-play-icon {
+  margin-right: 8px;
+  font-size: 0.9rem;
+}
+
+/* Divider y entidades confiadas */
+
+.hero-divider {
+  border: none;
+  border-top: 1px solid #1f2933;
+  margin: 24px 0 20px;
+}
+
+.hero-trust-label {
+  display: block;
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin-bottom: 12px;
+}
+
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background-color: #050b14;
+  border: 1px solid #111827;
+  font-size: 0.8rem;
+}
+
+/* Columna derecha: teléfono */
+
+.hero-visual {
+  flex: 1 1 45%;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-phone {
+  width: 320px;
+  max-width: 100%;
+  /* sin padding, sin fondo, sin borde, sin sombra */
+  padding: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-phone img {
+  width: 100%;
+  height: auto;
+  display: block;
+  /* si tu PNG ya tiene el marco del celular, tampoco necesita border-radius */
+  border-radius: 0;
+}
+
+/* Responsive básico */
+
+@media (max-width: 900px) {
+  .hero-inner {
+    flex-direction: column;
+    text-align: left;
+    padding: 56px 20px 72px;
+  }
+
+  .hero-visual {
+    order: -1;              /* el celular arriba en móvil si quieres, quita esto si no */
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-actions {
+    flex-wrap: wrap;
+  }
+}
